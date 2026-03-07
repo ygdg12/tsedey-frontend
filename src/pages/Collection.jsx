@@ -189,6 +189,13 @@ export default function Collection({ adminMode = false }) {
     e.preventDefault()
     if (!editingProduct) return
     setSaveError('')
+
+    const priceNumber = Number(editingProduct.price)
+    if (!editingProduct.label?.trim() || !editingProduct.price || Number.isNaN(priceNumber) || priceNumber <= 0) {
+      setSaveError('Label and price are required')
+      return
+    }
+
     const baseProduct = {
       image: editingProduct.image,
       label: editingProduct.label,
@@ -199,6 +206,7 @@ export default function Collection({ adminMode = false }) {
       vibe: editingProduct.vibe || 'studio',
       soldOut: editingProduct.soldOut || false,
       colorsAvailable: editingProduct.colorsAvailable || [],
+      price: priceNumber,
     }
 
     try {
@@ -231,6 +239,7 @@ export default function Collection({ adminMode = false }) {
       vibe: 'studio',
       soldOut: false,
       colorsAvailable: [],
+      price: '',
     })
   }
 
@@ -512,6 +521,18 @@ export default function Collection({ adminMode = false }) {
                       className="admin-input"
                       value={editingProduct.label}
                       onChange={(e) => setEditingProduct((p) => ({ ...p, label: e.target.value }))}
+                      required
+                    />
+                  </label>
+                  <label className="admin-label">
+                    Price
+                    <input
+                      type="number"
+                      min="0"
+                      step="0.01"
+                      className="admin-input"
+                      value={editingProduct.price ?? ''}
+                      onChange={(e) => setEditingProduct((p) => ({ ...p, price: e.target.value }))}
                       required
                     />
                   </label>
