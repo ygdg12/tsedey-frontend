@@ -1219,6 +1219,22 @@ a.btn-secondary {
     padding-inline: 0;
   }
 
+  /* Tighter, aligned About section on mobile */
+  .home-about .section-header {
+    align-items: flex-start;
+  }
+
+  .home-about .section-title,
+  .home-about .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .home-about .about-split {
+    gap: 18px;
+  }
+
   .about-left {
     padding: 16px 16px 14px;
     border-radius: 18px;
