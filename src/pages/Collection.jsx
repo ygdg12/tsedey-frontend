@@ -190,9 +190,8 @@ export default function Collection({ adminMode = false }) {
     if (!editingProduct) return
     setSaveError('')
 
-    const priceNumber = Number(editingProduct.price)
-    if (!editingProduct.label?.trim() || !editingProduct.price || Number.isNaN(priceNumber) || priceNumber <= 0) {
-      setSaveError('Label and price are required')
+    if (!editingProduct.label?.trim()) {
+      setSaveError('Label is required')
       return
     }
 
@@ -206,7 +205,8 @@ export default function Collection({ adminMode = false }) {
       vibe: editingProduct.vibe || 'studio',
       soldOut: editingProduct.soldOut || false,
       colorsAvailable: editingProduct.colorsAvailable || [],
-      price: priceNumber,
+      // send a default price so backend validation passes even though user doesn't set one
+      price: typeof editingProduct.price === 'number' ? editingProduct.price : 0,
     }
 
     try {
@@ -239,7 +239,8 @@ export default function Collection({ adminMode = false }) {
       vibe: 'studio',
       soldOut: false,
       colorsAvailable: [],
-      price: '',
+      // no visible price field; backend gets a default
+      price: 0,
     })
   }
 
@@ -521,18 +522,6 @@ export default function Collection({ adminMode = false }) {
                       className="admin-input"
                       value={editingProduct.label}
                       onChange={(e) => setEditingProduct((p) => ({ ...p, label: e.target.value }))}
-                      required
-                    />
-                  </label>
-                  <label className="admin-label">
-                    Price
-                    <input
-                      type="number"
-                      min="0"
-                      step="0.01"
-                      className="admin-input"
-                      value={editingProduct.price ?? ''}
-                      onChange={(e) => setEditingProduct((p) => ({ ...p, price: e.target.value }))}
                       required
                     />
                   </label>
