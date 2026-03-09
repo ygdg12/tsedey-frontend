@@ -1235,6 +1235,26 @@ a.btn-secondary {
     gap: 18px;
   }
 
+  /* Better alignment for the three feature cards */
+  .home-about .about-right {
+    gap: 10px;
+  }
+
+  .home-about .about-panel {
+    align-items: center;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .home-about .about-panel-title {
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+  }
+
+  .home-about .about-panel-text {
+    line-height: 1.55;
+  }
+
   .about-left {
     padding: 16px 16px 14px;
     border-radius: 18px;
@@ -1246,7 +1266,6 @@ a.btn-secondary {
   }
 
   .about-panel {
-    padding: 14px 14px 12px;
     border-radius: 18px;
   }
 
