@@ -51,8 +51,8 @@ export default function Contacts() {
       id: 1,
       name: 'Telegram',
       Icon: TelegramIcon,
-      url: 'https://t.me/tsedey_activewear',
-      handle: '@tsedey_activewear',
+      url: 'https://t.me/tsedeyactivewear',
+      handle: '@tsedeyactivewear',
     },
     {
       id: 2,
@@ -66,7 +66,7 @@ export default function Contacts() {
       name: 'TikTok',
       Icon: TikTokIcon,
       url: 'https://www.tiktok.com/@tsedey.active',
-      handle: '@tsedey.active',
+      handle: '@tsedeyactivewear',
     },
     {
       id: 4,
@@ -107,7 +107,7 @@ export default function Contacts() {
           </div>
           <div className="contact-quick-body">
             <div className="contact-quick-title">Telegram</div>
-            <div className="contact-quick-value">@tsedey_activewear</div>
+            <div className="contact-quick-value">@tsedeyactivewear</div>
             <div className="contact-quick-note">Send size list and quantities</div>
           </div>
         </a>

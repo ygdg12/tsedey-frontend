@@ -140,7 +140,7 @@ export default function Home() {
         <div className="about-split">
           <div className="about-left">
             <p className="about-lead">
-              Tsedey Activewear is a sports clothing brand based in Addis Ababa, Ethiopia — focused
+              Tsedey Activewear is a sports clothing brand based in Addis Ababa, Ethiopia focused
               on fit, comfort, and pieces you can train in and live in.
             </p>
             <p className="about-paragraph">
@@ -196,7 +196,7 @@ export default function Home() {
               <div className="about-panel-body">
                 <div className="about-panel-title">Team orders supported</div>
                 <div className="about-panel-text">
-                  Clubs and gyms can place bulk orders — we help with sizes, quantities, and reorders.
+                  Clubs and gyms can place bulk orders  we help with sizes, quantities, and reorders.
                 </div>
               </div>
             </div>
