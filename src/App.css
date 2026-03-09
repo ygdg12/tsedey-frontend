@@ -1365,6 +1365,11 @@ a.btn-secondary {
     display: block;
   }
 
+  /* Contact page: socials should be stacked on phones */
+  .contact-social-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .collection-toolbar {
     align-items: flex-start;
     margin-bottom: 22px;
@@ -1386,11 +1391,36 @@ a.btn-secondary {
   .cart-item {
     padding: 16px;
     gap: 14px;
+    position: relative;
   }
 
   .cart-item-image {
     width: 86px;
     height: 104px;
+  }
+
+  .cart-item-details {
+    padding-right: 34px;
+    min-width: 0;
+  }
+
+  .cart-item-name {
+    font-size: 13px;
+    line-height: 1.25;
+    word-break: break-word;
+  }
+
+  .cart-item-meta {
+    flex-wrap: wrap;
+    gap: 10px;
+    line-height: 1.4;
+  }
+
+  .cart-item-actions {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    margin: 0;
   }
 
   .cart-summary-card {
