@@ -1367,7 +1367,7 @@ a.btn-secondary {
 
   /* Contact page: socials should be stacked on phones */
   .contact-social-grid {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 
   .collection-toolbar {
@@ -1392,6 +1392,8 @@ a.btn-secondary {
     padding: 16px;
     gap: 14px;
     position: relative;
+    grid-template-columns: 86px minmax(0, 1fr);
+    align-items: start;
   }
 
   .cart-item-image {
@@ -1402,6 +1404,7 @@ a.btn-secondary {
   .cart-item-details {
     padding-right: 34px;
     min-width: 0;
+    padding-left: 2px;
   }
 
   .cart-item-name {
