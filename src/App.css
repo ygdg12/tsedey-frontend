@@ -1235,6 +1235,20 @@ a.btn-secondary {
     gap: 16px;
   }
 
+  /* Ensure left block is always above cards on mobile */
+  .home-about .about-split {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home-about .about-left {
+    order: 1;
+  }
+
+  .home-about .about-right {
+    order: 2;
+  }
+
   .home-about .about-right {
     gap: 10px;
   }
@@ -1405,6 +1419,23 @@ a.btn-secondary {
   /* Contact page: last 4 social cards stack (no side-by-side) */
   .contact-social-grid {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Contact socials: icon above text on mobile */
+  .contact-social-card {
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contact-social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 16px;
+  }
+
+  .contact-social-icon svg {
+    width: 20px;
+    height: 20px;
   }
 }
 
