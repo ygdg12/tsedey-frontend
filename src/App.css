@@ -1239,9 +1239,19 @@ a.btn-secondary {
     gap: 10px;
   }
 
-  /* Better alignment for the three feature cards */
-  .home-about .about-right {
+  .home-about .about-left {
+    width: 100%;
+  }
+
+  .home-about .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
+  }
+
+  .home-about .stat-pill {
+    min-width: 0;
+    width: 100%;
   }
 
   .home-about .about-panel {
@@ -1259,15 +1269,12 @@ a.btn-secondary {
     line-height: 1.55;
   }
 
-  .about-left {
+  .home-about .about-left {
     padding: 16px 16px 14px;
     border-radius: 18px;
   }
 
-  .stat-pill {
-    min-width: 0;
-    flex: 1 1 140px;
-  }
+  /* Keep global stat-pill rule intact; home-about overrides above */
 
   .about-panel {
     border-radius: 18px;
@@ -1373,6 +1380,37 @@ a.btn-secondary {
 
   .stat-pill {
     width: 100%;
+  }
+
+  .home-about .about-stats {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-page .section-header {
+    align-items: flex-start;
+  }
+
+  .contact-page .section-title,
+  .contact-page .section-subtitle {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .contact-socials {
+    padding: 16px;
+    border-radius: 22px;
+  }
+
+  .contact-quick-card {
+    padding: 16px;
+    border-radius: 20px;
+  }
+
+  .contact-quick-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
   }
 
   .contact-social-grid {
