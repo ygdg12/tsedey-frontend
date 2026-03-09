@@ -30,7 +30,7 @@ export default function Collection({ adminMode = false }) {
   const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false)
   const [deleteError, setDeleteError] = useState('')
   const [deleting, setDeleting] = useState(false)
-
+//a
   useEffect(() => {
     if (editingProduct || managingCategoriesOpen) {
       document.body.style.overflow = 'hidden'
