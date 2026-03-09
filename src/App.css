@@ -1235,6 +1235,10 @@ a.btn-secondary {
     gap: 18px;
   }
 
+  .home-about .about-right {
+    gap: 10px;
+  }
+
   /* Better alignment for the three feature cards */
   .home-about .about-right {
     gap: 10px;
